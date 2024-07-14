@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Information Form</h1>
+        <form action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+
+            <label for="license_plate">License Plate Number:</label>
+            <input type="text" name="license_plate" required>
+
+            <label for="address">Address:</label>
+            <input type="text" name="address" required>
+
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" name="phone_number" required>
+
+            <label for="emergency_phone_number">Emergency Phone Number:</label>
+            <input type="text" name="emergency_phone_number" required>
+
+            <label for="blood_group">Blood Group:</label>
+            <input type="text" name="blood_group" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

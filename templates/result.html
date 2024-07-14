@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .info {
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Result</h1>
+        <p><strong>License Plate Number:</strong> {{ text }}</p>
+        {% if user_info %}
+        <div class="info">
+            <p><strong>Name:</strong> {{ user_info[1] }}</p>
+            <p><strong>Address:</strong> {{ user_info[3] }}</p>
+            <p><strong>Phone Number:</strong> {{ user_info[4] }}</p>
+            <p><strong>Emergency Phone Number:</strong> {{ user_info[5] }}</p>
+            <p><strong>Blood Group:</strong> {{ user_info[6] }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
